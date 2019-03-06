@@ -1,3 +1,5 @@
+Revision 0.03
+	- realized bits flipped because first read bit is last data bit. 
 Revision 0.02
 	- First attempt attempt at code using state machine logic
 Revision 0.01 

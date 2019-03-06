@@ -4,7 +4,7 @@
 // Engineer: Colton Beery
 // 
 // Create Date: 03/6/2019 1:05 PM
-// Revision Date: 03/6/2019 1:31 PM
+// Revision Date: 03/6/2019 1:43 PM
 // Module Name: UART_RX
 // Project Name: UART
 // Target Devices: Basys3
@@ -19,8 +19,8 @@
 //      Basys3_Master_Customized.xdc
 //      UART_TX.v
 // 
-// Revision 0.02
-// Changelog in Changelog.txt
+// Revision 0.03
+// Changelog in Changelog.txt and Github
 //
 // Additional Comments:  
 // 
@@ -60,6 +60,7 @@ module UART_RX(
                     counter <= 0;
                     state <= isStart;
                 end
+                data <= 0;
             end
             
             isStart: begin
@@ -84,7 +85,7 @@ module UART_RX(
                             if (counter < max_counter) begin //wait for counter to reach 10415, then read
                                 counter <= counter + 1; 
                             end else begin //reset counter when it reaches 10415, and go to next bit
-                                data[bit] <= JA[0];
+                                data[7-bit] <= JA[0];
                                 counter <= 0;
                                 bit <= bit + 1; 
                             end
