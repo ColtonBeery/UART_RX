@@ -1,45 +1,5 @@
-Revision 0.20
-	-Fixed error in start state that made it only output start bit (0) for 1 clock cycle (1/100 MHz) instead of 1/9600 of a second 
-Revision 0.19
-	- Trying nested if statements again, because a google search said that for loops in verilog aren't sequential, meaning the entire for loop was operating in one clock cycle. That explains why the highest bit was the only one that made a visible change in the output waveform.
-	- For some reason, this also made synthesis and implementation way faster. About 2 minutes instead of 10 minutes. 
-Revision 0.18
-	- Removed fancy idle_bit, start_bit, and stop_bit parameters because they were unneccesary and I feel like they might be part of why the synthesis was taking 10+ minutes 
-	- Initialized data, bit, and counter registers to 0 because... can't hurt, right? 
-Revision 0.17
-	- Tried changing all the blocking = signs inside the always block to nonblocking <= signs
-Revision 0.16
-	- replaced 	current_state	 and 	next_state	 with a single state variable 	state	because Vivado says it merges the two anyways. 
-	- removed default state from case statement because Vivado says default case is never used
-	- removed unneccesary inputs IO_SWITCH 8 to 15 that were never used. 
-Revision 0.15
-	- Found an error where I typed	 for (bit = 0; counter < 7; bit = bit + 1)	when it should have been	for (bit = 0; bit < 7; bit = bit + 1)
-Revision 0.14 
-	- Solved error that caused synthesis of Revision 0.13 caused my laptop to BSOD twice. Solved by removing debug declarations from XDC file. Not sure why they cause a proble because they worked for the last several revisions. 
-	- Restored for loop logic because I wasn't getting any output with my if loop logic. Now it at least outputs some incorrect stuff, instead of always asserting 0 when button pushed.	
- Revision 0.13 
-	- Adding more states to try to solve the problem of no data output. After using LEDs for Debugging in Revision 0.12, it looks like the input data is being read from the switches correctly, because using	 assign IO_LED = data;	 turns on the correct LEDs. But trying to concatenate 	transmission = {stop_bit, data, start_bit};	 and outputting that to the LED's doesn't turn on any LEDs.  
- Revision 0.12 
-	- Still no data output. Added LEDs for debugging.  
- Revision 0.11 
-	- 0.10 still wouldn't output anything. I think I tried to get too fancy by setting data size to [number_data_bits-1:0] instead of hardcoding size
- Revision 0.10 
-	- Fixed logic error on line 120 where I put a 1 when it should be a 0, resulting in the Tx pin always asserting 0 after button pushed
- Revision 0.09 
-	- Apparently I never incremented counter in revision 0.08. Fixed that. 
- Revision 0.08 
-	- I think the for loop logic is messing me up. Trying if statements instead. 
- Revision 0.07 
-	- tried changing all nonblocking statements to blocking statements
- Revision 0.06 
-	- changed read logic from      if (IO_BTN_C ) begin   to     if (IO_BTN_C && ~transmit ) begin  
- Revision 0.05 
-	- Removed read state, moved into an if statement 
- Revision 0.04 
-	- Added baud rate generation 
- Revision 0.03 
-	- Move transmit logic into for loop
- Revision 0.02 
-	- First attempts at basic code
- Revision 0.01 
+Revision 0.02
+	- First attempt attempt at code using state machine logic
+Revision 0.01 
 	- File Created
+	- Instantiates Tx module
