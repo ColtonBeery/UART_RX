@@ -10,21 +10,11 @@ This assignment is to create two state machine designs in Verilog and demonstrat
 
 	2. Rx: The tough one, receiving a byte in the format above and displaying it using the LEDs. Your Rx will have to detect the start bit, with 1/2 bit period to confirm a valid start bit, then sample in the middle of each bit interval shifting each bit into an 8 bit register that drives the 8 LEDs on the IO board.
 	
-	<details>
-	<summary>Part 1 - Transmitter</summary>
 	
-	<p>
-		For this specific assignment, in part 1 you must implement a UART that takes paralllel input data from the switches and buttons, and produces a serial output on one of the FPGA output pins.  In order to do that, you must also create a clock with an appropriate frequency to operate the UART from the on-board oscillator connected to the FPGA.  The clock frequency should be higher than the data rate to allow for the requirements for part 2 below, most UARTs use a clock that is 16x the data rate. Capture the serial output data on the scope or logic analyzer abd confirm the serial output data is correct and that the bit period is 1/9600th second long.
-	</p>
-	</details>
+For this specific assignment, in part 1 you must implement a UART that takes paralllel input data from the switches and buttons, and produces a serial output on one of the FPGA output pins.  In order to do that, you must also create a clock with an appropriate frequency to operate the UART from the on-board oscillator connected to the FPGA.  The clock frequency should be higher than the data rate to allow for the requirements for part 2 below, most UARTs use a clock that is 16x the data rate. Capture the serial output data on the scope or logic analyzer abd confirm the serial output data is correct and that the bit period is 1/9600th second long.
 	
-	<details>
-	<summary>Part 2 - Receiver</summary>
+In part 2, you will design a serial to parallel receiver that will receive the asynchronous data from your transmitter in part 1 above, and convert it into an 8 bit parallel word for display on the LEDs on the I/O board.
 	
-	<p>
-		In part 2, you will design a serial to parallel receiver that will receive the asynchronous data from your transmitter in part 1 above, and convert it into an 8 bit parallel word for display on the LEDs on the I/O board.
-	</p>
-	</details>
 Ultimately, you will be implementing the core subset of transmit/receive functions of a device similar to the SCC2691 serial UART chip in the file listed below, so you should review the transmit buffer empty and receive buffer full status registers of that device.  For full credit, your final UART design should implement the receive buffer full and transmit buffer empty bits. You will need to take the raw FPGA input clock (8MHz for the older version of the board, 50MHz for the newer rev A board that has DIYchips.com written in white letters on the top of the board) and convert that clock into an appropriate clock for your two state machines.
 </p>
 </details>
