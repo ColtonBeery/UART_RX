@@ -3,7 +3,6 @@
 <details>
 	<summary>The Instructions </summary>
 	
-	<p>
 This assignment is to create two state machine designs in Verilog and demonstrate them on the FPGA board:
 
 1. Tx: The simpler of the two. When an 8 bit value is loaded into a register using the 8 DIP switches for the number and a push button for the "load" signal, it shifts the byte out in asynchronous serial format (initially at 9600 bits per second, later at an arbitrary, programmable data rate).  That begins with a start bit (0), followed by the 8 data bits LSB first, and a stop (1) bit.
@@ -16,5 +15,4 @@ For this specific assignment, in part 1 you must implement a UART that takes par
 In part 2, you will design a serial to parallel receiver that will receive the asynchronous data from your transmitter in part 1 above, and convert it into an 8 bit parallel word for display on the LEDs on the I/O board.
 	
 Ultimately, you will be implementing the core subset of transmit/receive functions of a device similar to the SCC2691 serial UART chip in the file listed below, so you should review the transmit buffer empty and receive buffer full status registers of that device.  For full credit, your final UART design should implement the receive buffer full and transmit buffer empty bits. You will need to take the raw FPGA input clock (8MHz for the older version of the board, 50MHz for the newer rev A board that has DIYchips.com written in white letters on the top of the board) and convert that clock into an appropriate clock for your two state machines.
-</p>
 </details>
