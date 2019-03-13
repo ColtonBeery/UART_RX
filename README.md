@@ -14,7 +14,7 @@ This assignment is to create two state machine designs in Verilog and demonstrat
 
 <details>
 	<summary>Part 1 - Transmit</summary>
-For this specific assignment, in part 1 you must implement a UART that takes paralllel input data from the switches and buttons, and produces a serial output on one of the FPGA output pins.  In order to do that, you must also create a clock with an appropriate frequency to operate the UART from the on-board oscillator connected to the FPGA.  The clock frequency should be higher than the data rate to allow for the requirements for part 2 below, most UARTs use a clock that is 16x the data rate. Capture the serial output data on the scope or logic analyzer abd confirm the serial output data is correct and that the bit period is 1/9600th second long.
+For this specific assignment, in part 1 you must implement a UART that takes parallel input data from the switches and buttons, and produces a serial output on one of the FPGA output pins.  In order to do that, you must also create a clock with an appropriate frequency to operate the UART from the on-board oscillator connected to the FPGA.  The clock frequency should be higher than the data rate to allow for the requirements for part 2 below, most UARTs use a clock that is 16x the data rate. Capture the serial output data on the scope or logic analyzer and confirm the serial output data is correct and that the bit period is 1/9600th second long.
 	</details>
 
 <details>
@@ -29,10 +29,13 @@ Ultimately, you will be implementing the core subset of transmit/receive functio
 
 <details>
 	<summary> The Logic </summary>
-
+	![The Basic Logic](https://raw.githubusercontent.com/gameguy95/UART_RX/master/docs/UART%20Rx%20Logic.jpg "The Basic Logic")
 </details>
 
 <details>
-	<summary> The Lab Report </summary>
+	<summary> Progress and Conclusions </summary>
+Progress: I was able to demonstrate Tx using the scope at 9600 baud, as well as Rx displayed using the 8 LEDs. I did not attempt to go any further by adding extra features such as a programmable baud rate.   
+
+Conclusion: Once I got the UART Tx lab done, the Rx lab was actually surprisingly easy in comparison. If I had more time, I would attempt to add programmable baud rate generation to the Tx and Rx modules.
 
 </details>
