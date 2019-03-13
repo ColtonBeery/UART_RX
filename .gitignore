@@ -93,9 +93,10 @@
 #########
 !*.zip
 #########
-#Project Reports
+#Project report related files
 #########
 !*.pdf
+!*.jpg
 *.pb
 *.rpt
 *.jou
