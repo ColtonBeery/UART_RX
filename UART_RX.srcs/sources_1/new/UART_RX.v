@@ -4,7 +4,7 @@
 // Engineer: Colton Beery
 // 
 // Create Date: 03/6/2019 1:05 PM
-// Revision Date: 03/6/2019 1:43 PM
+// Revision Date: 03/13/2019 9:08 AM
 // Module Name: UART_RX
 // Project Name: UART
 // Target Devices: Basys3
@@ -19,7 +19,7 @@
 //      Basys3_Master_Customized.xdc
 //      UART_TX.v
 // 
-// Revision 0.03
+// Revision 0.05
 // Changelog in Changelog.txt and Github
 //
 // Additional Comments:  
@@ -45,12 +45,12 @@ module UART_RX(
     parameter read = 2'b10;             //when reading data
     
     /* Data and transmission parameters */
-    reg [7:0] data = 0;                 //data output    
+    reg [8:0] data = 0;                 //data input    
     reg [3:0] bit = 0;                  //bit number currently being transmitted 
     parameter max_counter = 10415;      // this should give 9600 baud
     reg [13:0] counter = 0;             //counter for baud rate generation; currently hardcoded to 14 bits for 9600 baud
     
-    assign IO_LED = data; //LEDs used to display read data
+    assign IO_LED = data[7:0]; //LEDs used to display read data
     
     always @(posedge clk) begin
         case (state)
@@ -66,7 +66,7 @@ module UART_RX(
             isStart: begin
                 //Read a zero, but it might just be a glitch. 
                 // Wait for 1/2 of 1/9600 of a second and see if it's still a zero
-                if (counter < (max_counter/2)) begin
+                if (counter > (max_counter/2)) begin
                     if (~JA) begin
                         //if it's still a 0, we have a start bit
                         counter <= 0;
@@ -76,16 +76,16 @@ module UART_RX(
                         counter <= 0;
                         state <= idle;
                     end
-                    counter <= counter + 1;
                 end
+                counter <= counter + 1;
             end
             
             read: begin
-                if (bit <= 7) begin // If there's still more bits to transmit
+                if (bit <= 8) begin // If there's still more bits to transmit
                             if (counter < max_counter) begin //wait for counter to reach 10415, then read
                                 counter <= counter + 1; 
                             end else begin //reset counter when it reaches 10415, and go to next bit
-                                data[7-bit] <= JA[0];
+                                data[bit] <= JA[0];
                                 counter <= 0;
                                 bit <= bit + 1; 
                             end
