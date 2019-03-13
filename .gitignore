@@ -96,3 +96,7 @@
 #Project Reports
 #########
 !*.pdf
+*.pb
+*.rpt
+*.jou
+*.dcp
