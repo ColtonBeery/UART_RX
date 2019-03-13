@@ -1,50 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1551908671">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1552493359">
+  <File Type="BITSTR-BMM" Name="UART_RX_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="UART_RX_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="UART_RX_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="UART_RX_power_routed.rpt"/>
   <File Type="PA-TCL" Name="UART_RX.tcl"/>
-  <File Type="BITSTR-BMM" Name="UART_RX_bd.bmm"/>
+  <File Type="OPT-TIMING" Name="UART_RX_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="UART_RX_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="UART_RX_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="UART_RX_reports.tcl"/>
-  <File Type="OPT-DCP" Name="UART_RX_opt.dcp"/>
   <File Type="OPT-DRC" Name="UART_RX_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="UART_RX.hwdef"/>
   <File Type="PWROPT-DCP" Name="UART_RX_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="UART_RX_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="UART_RX_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="UART_RX_placed.dcp"/>
   <File Type="PLACE-IO" Name="UART_RX_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="UART_RX_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="UART_RX_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="UART_RX_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="UART_RX_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="UART_RX_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="UART_RX_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="UART_RX.bgn"/>
+  <File Type="PLACE-TIMING" Name="UART_RX_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="UART_RX_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="UART_RX.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="UART_RX_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="UART_RX_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="UART_RX_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="UART_RX.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="UART_RX_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="UART_RX_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="UART_RX_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="UART_RX_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="UART_RX_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="UART_RX_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="UART_RX_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="UART_RX.ltx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="UART_RX_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="UART_RX_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="UART_RX.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="UART_RX_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="UART_RX_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="UART_RX_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="UART_RX.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="UART_RX_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="UART_RX_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="UART_RX_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="UART_RX_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="UART_RX_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="UART_RX_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="UART_RX_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="UART_RX_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="UART_RX_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="UART_RX_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="UART_RX_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="UART_RX_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="UART_RX_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="UART_RX_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="UART_RX_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="UART_RX_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="UART_RX_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="UART_RX_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="UART_RX_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="UART_RX.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="UART_RX_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="UART_RX.rbt"/>
   <File Type="BITSTR-NKY" Name="UART_RX.nky"/>
   <File Type="BG-DRC" Name="UART_RX.drc"/>
