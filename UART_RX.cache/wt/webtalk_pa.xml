@@ -19,7 +19,7 @@ This means code written to parse this file will need to be revisited each subseq
 <item name="Java Command Handlers">
 <property name="AddSources" value="2" type="JavaHandler"/>
 <property name="ArchiveProject" value="1" type="JavaHandler"/>
-<property name="AutoConnectTarget" value="14" type="JavaHandler"/>
+<property name="AutoConnectTarget" value="16" type="JavaHandler"/>
 <property name="CloseProject" value="4" type="JavaHandler"/>
 <property name="CreateHardwareDashboards" value="2" type="JavaHandler"/>
 <property name="DebugWizardCmdHandler" value="6" type="JavaHandler"/>
@@ -29,7 +29,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="LaunchProgramFpga" value="36" type="JavaHandler"/>
 <property name="MarkDebug" value="4" type="JavaHandler"/>
 <property name="NewProject" value="3" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="27" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="29" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="4" type="JavaHandler"/>
 <property name="ProgramDevice" value="14" type="JavaHandler"/>
 <property name="RefreshDevice" value="1" type="JavaHandler"/>
@@ -57,7 +57,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ArchiveProjectDialog_INCLUDE_LOCAL_IP_CACHE_RESULTS" value="1" type="GuiHandlerData"/>
 <property name="ArchiveProjectDialog_INCLUDE_RUN_RESULTS" value="2" type="GuiHandlerData"/>
 <property name="BaseDialog_CANCEL" value="6" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="72" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="73" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="2" type="GuiHandlerData"/>
 <property name="BoardChooser_BOARD_TABLE" value="2" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OK" value="2" type="GuiHandlerData"/>
@@ -77,7 +77,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS" value="29" type="GuiHandlerData"/>
 <property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="22" type="GuiHandlerData"/>
 <property name="ExploreAheadView_LAUNCH_SELECTED_RUNS" value="2" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="62" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="64" type="GuiHandlerData"/>
 <property name="FileSetPanel_MESSAGES" value="1" type="GuiHandlerData"/>
 <property name="FindAndPickNetsDialog_NETS_TREE_TABLE_PANEL" value="12" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="130" type="GuiHandlerData"/>
@@ -129,7 +129,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACodeEditor_REPLACE_IN_FILES" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_ADD_SOURCES" value="2" type="GuiHandlerData"/>
 <property name="PACommandNames_ARCHIVE_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_AUTO_CONNECT_TARGET" value="14" type="GuiHandlerData"/>
+<property name="PACommandNames_AUTO_CONNECT_TARGET" value="16" type="GuiHandlerData"/>
 <property name="PACommandNames_AUTO_UPDATE_HIER" value="4" type="GuiHandlerData"/>
 <property name="PACommandNames_CLOSE_PROJECT" value="3" type="GuiHandlerData"/>
 <property name="PACommandNames_CREATE_HARDWARE_DASHBOARDS" value="3" type="GuiHandlerData"/>
@@ -151,7 +151,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_TCL_CONSOLE_WINDOW" value="1" type="GuiHandlerData"/>
 <property name="PAViews_DASHBOARD" value="3" type="GuiHandlerData"/>
 <property name="PAViews_DEVICE" value="2" type="GuiHandlerData"/>
-<property name="PAViews_PROJECT_SUMMARY" value="19" type="GuiHandlerData"/>
+<property name="PAViews_PROJECT_SUMMARY" value="21" type="GuiHandlerData"/>
 <property name="PAViews_TCL_OBJECT_VIEW" value="1" type="GuiHandlerData"/>
 <property name="ProbeValueTablePanel_TEXT_FIELD" value="5" type="GuiHandlerData"/>
 <property name="ProbesView_PROBES_TREE" value="9" type="GuiHandlerData"/>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1552495217">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1552493359">
+>>>>>>> 0c9b1c1c86fec50e361f09cabf4881269a0c24e2
   <File Type="PA-TCL" Name="UART_RX.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="UART_RX_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="UART_RX_reports.tcl"/>

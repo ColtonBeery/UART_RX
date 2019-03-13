@@ -4,7 +4,11 @@
 // Engineer: Colton Beery
 // 
 // Create Date: 03/6/2019 1:05 PM
+<<<<<<< HEAD
 // Revision Date: 03/13/2019 9:40 AM
+=======
+// Revision Date: 03/13/2019 9:08 AM
+>>>>>>> 0c9b1c1c86fec50e361f09cabf4881269a0c24e2
 // Module Name: UART_RX
 // Project Name: UART
 // Target Devices: Basys3
@@ -19,7 +23,11 @@
 //      Basys3_Master_Customized.xdc
 //      UART_TX.v
 // 
+<<<<<<< HEAD
 // Revision 1.0
+=======
+// Revision 0.05
+>>>>>>> 0c9b1c1c86fec50e361f09cabf4881269a0c24e2
 // Changelog in Changelog.txt and Github
 //
 // Additional Comments:  Data is outputted to the JA[0] port by the UART Tx code 
@@ -46,12 +54,21 @@ module UART_RX(
     parameter read = 2'b10;             // When reading data
     
     /* Data and transmission parameters */
+<<<<<<< HEAD
     reg [8:0] data = 0;                 // Data input from transmitter; data[8] is only used to account for UART stop bit
     reg [3:0] bit = 0;                  // bit number currently being transmitted 
     parameter max_counter = 10415;      // this should give 9600 baud
     reg [13:0] counter = 0;             //counter for baud rate generation; currently hardcoded to 14 bits for 9600 baud
     
     assign IO_LED = data[7:0]; // Data is read from the data register and output on LEDs
+=======
+    reg [8:0] data = 0;                 //data input    
+    reg [3:0] bit = 0;                  //bit number currently being transmitted 
+    parameter max_counter = 10415;      // this should give 9600 baud
+    reg [13:0] counter = 0;             //counter for baud rate generation; currently hardcoded to 14 bits for 9600 baud
+    
+    assign IO_LED = data[7:0]; //LEDs used to display read data
+>>>>>>> 0c9b1c1c86fec50e361f09cabf4881269a0c24e2
     
     always @(posedge clk) begin
         case (state)
@@ -84,11 +101,18 @@ module UART_RX(
             
             /* Read the data bits */ 
             read: begin
+<<<<<<< HEAD
                 if (bit <= 8) begin                          // If there's still more bits to receive
                             // wait for counter to reach 10415 (1 full bit length), read the JA[0], then go to next bit
                             if (counter < max_counter) begin 
                                 counter <= counter + 1; 
                             end else begin
+=======
+                if (bit <= 8) begin // If there's still more bits to transmit
+                            if (counter < max_counter) begin //wait for counter to reach 10415, then read
+                                counter <= counter + 1; 
+                            end else begin //reset counter when it reaches 10415, and go to next bit
+>>>>>>> 0c9b1c1c86fec50e361f09cabf4881269a0c24e2
                                 data[bit] <= JA[0];
                                 counter <= 0;
                                 bit <= bit + 1; 

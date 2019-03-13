@@ -5,9 +5,9 @@ Revision 0.05
 Revision 0.04
 	- changed 'if (counter < (max_counter/2)) begin' to 'if (counter > (max_counter/2)) begin'in start logic
 Revision 0.03
-	- realized bits flipped because first read bit is last data bit. 
+	- realized bits flipped because first read bit is last data bit.
 Revision 0.02
 	- First attempt attempt at code using state machine logic
-Revision 0.01 
+Revision 0.01
 	- File Created
 	- Instantiates Tx module
